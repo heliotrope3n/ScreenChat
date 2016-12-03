@@ -10,6 +10,7 @@ def hello():
 @app.route("/chat", methods=['POST'])
 def chat():
     input = request.form['userInput']
+    print(input)
     return render_template('chat.html', input=input)
 
 @app.route("/about")
