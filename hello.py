@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 #testing
 app = Flask(__name__)
@@ -6,6 +6,11 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return render_template('home.html')
+
+@app.route("/chat", methods=['POST'])
+def chat():
+    input = request.form['userInput']
+    return render_template('home.html', input=input)
 
 @app.route("/about")
 def about():
