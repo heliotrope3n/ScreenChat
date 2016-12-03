@@ -2,7 +2,7 @@ body {
 	background-color: lightblue;
 }
 
-h1 {
+.title {
 	color: red;
 	text-align: center;
 }
