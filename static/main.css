@@ -1,8 +1,10 @@
 body {
-	background-color: red;
+	background-color: #CBDCD4;
 }
 
 .title {
-	color: green;
+	color: #69897E;
+	font-family: "Impact"
+	font-size: 70px;
 	text-align: center;
 }
