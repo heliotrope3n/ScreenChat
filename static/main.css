@@ -13,6 +13,16 @@ body {
 	color: #CB4335;
 }
 
+.title a:visited {
+	text-decoration: none;
+	color: #CB4335;
+}
+
+.title a:hover {
+	text-decoration: none;
+	color: #C94133;
+}
+
 .content {
   display:flex;
   flex-direction: column;
