@@ -3,8 +3,8 @@
 {% block title %}Chat{% endblock %}
 
 {% block content %}
-<textarea ROWS="3" COLS="35" ID="output" NAME="output" readonly="readonly"
-style="font-size: 20pt">
+<textarea ROWS="3" COLS="35" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">
+{{ input }}
 </textarea>
 
   <form action="chat" method="POST">
