@@ -4,23 +4,7 @@ import random
 #testing
 app = Flask(__name__)
 
-
-
-
-
-@app.route("/")
-def hello():
-    return render_template('home.html')
-
-@app.route("/chat", methods=['POST'])
-def chat():
-    input = request.form['userInput']
-    thing = input.strip().lower()
-    #jokes = ["You are the joke", "A guy walks into a bar and asks for 1.4 root beers. The bartender says \"I'll have to charge you extra, that's a root beer float\". The guy says \"In that case, better make it a double."]
-    #i = random.randint(0,10)
-    dict = {
-        "tell me a joke" : "You are the joke",
-        "joke": "A guy walks into a bar and asks for 1.4 root beers. The bartender says \"I'll have to charge you extra, that's a root beer float\". The guy says \"In that case, better make it a double.",
+dict = {
         "hi" : "Hey there",
         "hello" : "Hi",
 		"hey" : "Haystack",
@@ -56,8 +40,23 @@ def chat():
 		"what is you favourite food?" : "cookies",
 		"play music" : "0101011101111010101101010101110000101101010101010",
 		"bye" : "Good"
-}   
-    if thing in dict:        
+    }  
+
+
+
+@app.route("/")
+def hello():
+    return render_template('home.html')
+
+@app.route("/chat", methods=['POST'])
+def chat():
+    input = request.form['userInput']
+    thing = input.strip().lower()
+    jokes = ["The environmental cost of finding a recycle bin for a water bottle is more than the environmental cost of just throwing the thing in the garbage.", "A QA analyst walks into a bar. Orders a beer. Orders 99999 beers. Orders -1 beers. Orders a sajdvhbj.", "A guy walks into a bar and asks for 1.4 root beers. The bartender says \"I'll have to charge you extra, that's a root beer float\". The guy says \"In that case, better make it a double."]
+     
+    if "tell" in thing and "joke" in thing:
+        return render_template('chat.html', input=jokes[random.randint(0,len(jokes) - 1)])
+    elif thing in dict:        
         return render_template('chat.html', input=dict[thing])
     else:
         return render_template('chat.html', input="I can't do that yet")
