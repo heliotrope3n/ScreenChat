@@ -2,10 +2,18 @@ body {
   background-color: #EBF5FB;
 }
 
+h1 {
+	font-family: "Montserrat";
+}
+
+p {
+	font-family: "Open Sans";
+}
+
 .title {
   color: #CB4335;
   text-align: center;
-  font-family: "Montserrat"
+  font-family: "Montserrat";
 }
 
 .title a:link {
@@ -30,12 +38,22 @@ body {
   align-items:center;
 }
 
+.robotpic {
+	height: 500px;
+}
+
 .entertext {
-  font-family: "Open Sans"
+  font-family: "Open Sans";
 }
 
 .logo {
 	height: 140px;
 }
 
+.footer {
+	font-family: "Montserrat";
+}
 
+.tablemenu  {
+	font-family: Open Sans";
+}
