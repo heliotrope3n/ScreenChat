@@ -33,12 +33,13 @@ def chat():
 		"go away" : "No.",
 		"help" : "Let's have a conversation! Say 'hi'",
 		"lol" : "You're not even laughing out loud",
+		"haha" : "what was so funny?",
 		"gtg" : "Finally...",
 		"see you" : "No you don't",
 		"what's up" : "The sky",
 		"what is your favourite colour?" : "Glaucous",
 		"what do you eat?" : "Memes",
-		"screenbot" : "What?"
+		"screenbot" : "What?",
 		"what's crackin'?" : "nuts",
 		"bruh" : "Waddup",
 		"never gonna give you up" : "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -56,6 +57,7 @@ def chat():
 		"what is you favourite food?" : "cookies",
 		"play music" : "0101011101111010101101010101110000101101010101010",
 		"bye" : "Good"
+		
 }   
     if thing in dict:        
         return render_template('chat.html', input=dict[thing])
