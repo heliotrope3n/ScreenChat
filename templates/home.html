@@ -10,7 +10,17 @@ What’s crackin’?
   <form action="chat" method="POST">
   <br>
 	<center class="entertext">Send Message:<br/></center>
-	<input TYPE="text" SIZE="61" ID="userInput" NAME="userInput" maxlength="255" value="" style="font-size: 15pt"/><br/>
+	
+	<form name="input">
+	<input TYPE="text" SIZE="61" ID="userInput" NAME="userInput" maxlength="255" value="" style="font-size: 15pt" autofocus/> <br/>
+	</form>
+	
+	<script>
+		window.onload = function() {
+		document.getElementById("userInput").focus();
+		}
+	</script>
+	
 	<div align="right">
 		<input TYPE="submit" style="font-family:Arial Black;font-size:12px;color:#616161" VALUE="Send">
 	</div>
