@@ -38,7 +38,7 @@ def chat():
 		"what's up" : "The sky",
 		"what is your favourite colour?" : "Glaucous",
 		"what do you eat?" : "Memes",
-		"screenbot" : "What?"
+		"screenbot" : "What?",
 		"what's crackin'?" : "nuts",
 		"bruh" : "Waddup",
 		"never gonna give you up" : "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
