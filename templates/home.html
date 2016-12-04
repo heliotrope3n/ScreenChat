@@ -3,7 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<textarea ROWS="3" COLS="35" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">
+<textarea ROWS="3" COLS="42" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">
 What’s crackin’?
 </textarea>
 
@@ -15,14 +15,17 @@ What’s crackin’?
 	<input TYPE="text" SIZE="61" ID="userInput" NAME="userInput" maxlength="255" value="" style="font-size: 15pt" autofocus/> <br/>
 	</form>
 	
+	<!--
+	<div align="right">
+		<input TYPE="submit" style="font-family:Arial Black;font-size:12px;color:#616161" VALUE="Send">
+	</div>
+	-->
+	
 	<script>
 		window.onload = function() {
 		document.getElementById("userInput").focus();
 		}
 	</script>
 	
-	<div align="right">
-		<input TYPE="submit" style="font-family:Arial Black;font-size:12px;color:#616161" VALUE="Send">
-	</div>
   <form action="hello.py">
 {% endblock %}
