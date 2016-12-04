@@ -27,7 +27,10 @@ def chat():
         "why" : "Why not",
         "hey siri" : "Hey Ugly",
         "ok google" : "Why you insult me?",
-        "hey cortana" : "Hey Ugly",   
+        "hey cortana" : "Hey Ugly",
+		"weather" : "I have no eyes, why don't you go see?",
+		"go away" : "no.",
+		"help" : "Let's have a conversation! Say 'hi'"
 }   
     if thing in dict:        
         return render_template('chat.html', input=dict[thing])
