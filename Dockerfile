@@ -11,4 +11,4 @@ COPY hello.py /src/hello.py
 COPY . /templates
 COPY . /static
 
-CMD ["python", "/src/bot.py"]
+CMD ["python", "/src/hello.py"]
