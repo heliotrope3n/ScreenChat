@@ -1,12 +1,23 @@
+<!-- Base layout for all pages, other pages extend this page -->
+
 <!DOCTYPE html>
+
+<!-- Should this go in head? Also why on same line? -Ningsong -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 <html>
   <head>
     <title>{% block title %}{% endblock %} - ScreenBot</title>
+    <!-- Title to be set by children of layout -->
+    
+    <!------------------------------- LINKS TO OTHER FILES ------------------------------------->
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    <!-- Do we have a link to javascript? - Ningsong -->
   </head>
   <body>
-  
+    
+    
+    <!------------------------------- HEADER ------------------------------------->
     <div class="header">
 	<center>
         <!-- <h1 class="title"><a href="{{ url_for('hello') }}">ScreenBot</a></h1> -->
@@ -14,6 +25,8 @@
 	</center>
     </div>
     
+    
+    <!------------------------------- CONTENT ------------------------------------->
     <div class="content">
       {% block content %}
       {% endblock %}
@@ -21,6 +34,10 @@
     
 	<br>
 	<center>
+    
+    
+    
+    <!------------------------------- FOOTER ------------------------------------->
     <div class="footer">
       <h1>Please enjoy!!!!</h1>
     </div>

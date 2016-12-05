@@ -3,6 +3,7 @@
 {% block title %}Chat{% endblock %}
 
 {% block content %}
+
 <textarea ROWS="3" COLS="42" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">
 {{ input }}
 </textarea>
@@ -16,11 +17,13 @@
 	</form>
 	
 	<!--
+    <!-- Specify why: see home.html for more details-->
 	<div align="right">
 		<input TYPE="submit" style="font-family:Arial Black;font-size:12px;color:#616161" VALUE="Send">
 	</div>
 	-->
 	
+    <!-- Inefficient - javascript code is copied twice-->
 	<script>
 		window.onload = function() {
 		document.getElementById("userInput").focus();

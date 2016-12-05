@@ -3,9 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<textarea ROWS="3" COLS="42" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">
-What’s crackin’?
-</textarea>
+<textarea ROWS="3" COLS="42" ID="output" NAME="output" readonly="readonly" style="font-size: 20pt">What’s crackin’?</textarea>
 
   <form action="chat" method="POST">
   <br>
@@ -16,11 +14,15 @@ What’s crackin’?
 	</form>
 	
 	<!--
+    <!-- When commenting stuff out, comment with reason why + name -Ningsong
+    <!-- Or it'll get messy soon 
+    
 	<div align="right">
 		<input TYPE="submit" style="font-family:Arial Black;font-size:12px;color:#616161" VALUE="Send">
 	</div>
 	-->
 	
+    <!-- Good enough for now, but maybe include javascript file with all functions, and link in layout.html -Ningsong -->
 	<script>
 		window.onload = function() {
 		document.getElementById("userInput").focus();
