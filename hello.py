@@ -88,7 +88,7 @@ def chat():
     elif thing in dict:        
         return render_template('chat.html', input=dict[thing])
     else:
-        return render_template('chat.html', input=dict[not_sure])
+        return render_template('chat.html', input=dict[rand_not_sure])
         
         
     # Suggestions: Add dropdown so as users type, they get a list of choices so no more idk
