@@ -1,8 +1,7 @@
-
 from flask import Flask, render_template, request
 
 import random # For picking random statements
-
+import datetime # For timing out people
 
 app = Flask(__name__)
 
@@ -47,7 +46,8 @@ dict = {
 		"marry me" : "You? pls",
 		"what is you favourite food?" : "cookies",
 		"play music" : "0101011101111010101101010101110000101101010101010",
-		"bye" : "Good"
+		"bye" : "Good",
+        "knock knock" : "Who's there",
         # STOP ADDING
         # We're going to be good at jokes
         
@@ -80,6 +80,8 @@ def chat():
     input = request.form['userInput']
     thing = input.strip().lower()
     
+    start_time = datetime.datetime.now()
+    print(start_time)
     # Pick random joke, pick random not sure statement
     rand_jokes = random.choice(jokes)
     rand_not_sure = random.choice(list(dict.keys()))
