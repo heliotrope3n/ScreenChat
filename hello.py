@@ -2,9 +2,17 @@ from flask import Flask, render_template, request
 
 import random # For picking random statements
 import datetime # For timing out people
+import os
 
 app = Flask(__name__)
 
+
+######################################3
+# http://virantha.com/2013/11/14/starting-a-simple-flask-app-with-heroku/
+#######################################3
+# Use to deploy to heroku/
+
+##
 
 # "Knowledge" of the bot"
 dict = {
@@ -57,7 +65,7 @@ dict = {
 jokes = ["The environmental cost of finding a recycle bin for a water bottle is more than the environmental cost of just throwing the thing in the garbage.", 
          "A QA analyst walks into a bar. Orders a beer. Orders 99999 beers. Orders -1 beers. Orders a sajdvhbj.",
          "A guy walks into a bar and asks for 1.4 root beers. The bartender says \"I'll have to charge you extra, that's a root beer float\". The guy says \"In that case, better make it a double.",
-         "You are the joke"
+         "You are the joke",
          # ADD MORE
         ]
 
@@ -109,4 +117,5 @@ def about():
     return render_template('about.html')
     
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
